@@ -1,16 +1,18 @@
-# dotroot
+# dotRoot
 
-A new Flutter project.
+A social network tool to help connect developers to each other, to potential jobs, or to freelance work. Similar in design to Twitter, dotRoot will provide a platform for people currently using Twitter to migrate from.
 
-## Getting Started
+### Features
 
-This project is a starting point for a Flutter application.
+- DotRoot is free and open source (BSD-style license)
 
-A few resources to get you started if this is your first Flutter project:
+- Post tools will support:
+    - Markdown support
+    - Embedded code (with syntax highlighting)
+    - Integration with other platforms (Twitter, Facebook, Google)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Easy to separate personal and professional profiles
+    - Personal let’s you share things with friends or family
+    - Professional let’s you easily work with clients or businesses who need your expertise
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Mentor Program is a program that provides you with a mentor who reviews your code and coaches who are paid to help you improve your skills with coding. Once you reach a certain level, you can become a mentor yourself and earn additional income.
