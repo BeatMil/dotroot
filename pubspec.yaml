@@ -1,5 +1,5 @@
 name: dotroot
-description: A new Flutter project.
+description: A social media network for developers.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -19,14 +19,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cloud_firestore: ^0.8.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
+# dev_dependencies:
+#   flutter_test:
+#     sdk: flutter
 
 
 # For information on the generic Dart part of this file, see the
@@ -40,6 +41,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - assets/MugiQT.png
+  # - assets/images/google_signin_button.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
