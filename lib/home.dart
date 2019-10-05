@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 // import 'dart:async';
 // import 'main.dart';
 
@@ -38,64 +38,64 @@ class _HomeViewState extends State<HomeView> /*with AutomaticKeepAliveClientMixi
     // }
   }
 
-  Widget _buildBody(BuildContext context) {
-    return _buildList(context, samplePosts);
-  }
+  // Widget _buildBody(BuildContext context) {
+  //   return _buildList(context, samplePosts);
+  // }
 
-  Widget _buildList(BuildContext context, List<Map> snapshot) {
-    return ListView(
-      padding: const EdgeInsets.only(top: 20.0),
-      children: snapshot.map((data) => _buildListItem(context, data)).toList(),
-    );
-  }
+  // Widget _buildList(BuildContext context, List<Map> snapshot) {
+  //   return ListView(
+  //     padding: const EdgeInsets.only(top: 20.0),
+  //     children: snapshot.map((data) => _buildListItem(context, data)).toList(),
+  //   );
+  // }
 
-  Widget _buildListItem(BuildContext context, Map data) {
-    final record = Record.fromMap(data);
+  // Widget _buildListItem(BuildContext context, Map data) {
+  //   final record = Record.fromMap(data);
 
-    return Padding(
-      key: ValueKey(record.name),
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey),
-          borderRadius: BorderRadius.circular(1.0),
-        ),
+  //   return Padding(
+  //     key: ValueKey(record.name),
+  //     padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+  //     child: Container(
+  //       decoration: BoxDecoration(
+  //         border: Border.all(color: Colors.grey),
+  //         borderRadius: BorderRadius.circular(1.0),
+  //       ),
         
-        child: Row(
-          children: <Widget>[
-            Column(
-              children: <Widget>[
-                Image.asset(
-                'assets/MugiQT.png',
-                height: 50,
-                ),
-                Text(record.name),
-                // ListTile(
-                //     title: Text(record.name),
-                //     trailing: Text(record.message),
-                //     onTap: () => print("User tapped post")
-                //     //  onTap: () => Firestore.instance.runTransaction((transaction) async {
-                //     //   final freshSnapshot = await transaction.get(record.reference);
-                //     //   final fresh = Record.fromSnapshot(freshSnapshot);
+  //       child: Row(
+  //         children: <Widget>[
+  //           Column(
+  //             children: <Widget>[
+  //               Image.asset(
+  //               'assets/MugiQT.png',
+  //               height: 50,
+  //               ),
+  //               Text(record.name),
+  //               // ListTile(
+  //               //     title: Text(record.name),
+  //               //     trailing: Text(record.message),
+  //               //     onTap: () => print("User tapped post")
+  //               //     //  onTap: () => Firestore.instance.runTransaction((transaction) async {
+  //               //     //   final freshSnapshot = await transaction.get(record.reference);
+  //               //     //   final fresh = Record.fromSnapshot(freshSnapshot);
 
-                //     //   await transaction
-                //     //       .update(record.reference, {'votes': fresh.votes + 1});
-                //     // }),
-                //     ),
-              ],
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              textDirection: TextDirection.rtl,
-              children: <Widget>[
-                Text(record.message)
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+  //               //     //   await transaction
+  //               //     //       .update(record.reference, {'votes': fresh.votes + 1});
+  //               //     // }),
+  //               //     ),
+  //             ],
+  //           ),
+  //           Column(
+  //             crossAxisAlignment: CrossAxisAlignment.center,
+  //             textDirection: TextDirection.rtl,
+  //             children: <Widget>[
+  //               Text(record.message)
+  //             ],
+  //           ),
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
 
 //   _loadPosts() async {
 //     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -166,7 +166,7 @@ class _HomeViewState extends State<HomeView> /*with AutomaticKeepAliveClientMixi
       ),
       body: RefreshIndicator(
         onRefresh: _refresh,
-        child: _buildBody(context),
+        child: Text('Screw it. Nothing freaking works'),
       ),
     );
   }
@@ -186,20 +186,20 @@ class _HomeViewState extends State<HomeView> /*with AutomaticKeepAliveClientMixi
 
 }
 
-class Record {
-  final String name;
-  final String message;
-  final DocumentReference reference;
+// class Record {
+//   final String name;
+//   final String message;
+//   // final DocumentReference reference;
 
-  Record.fromMap(Map<String, String> map, {this.reference})
-      : assert(map['name'] != null),
-        assert(map['message'] != null),
-        name = map['name'],
-        message = map['message'];
+//   Record.fromMap(Map<String, String> map, {this.reference})
+//       : assert(map['name'] != null),
+//         assert(map['message'] != null),
+//         name = map['name'],
+//         message = map['message'];
 
-  Record.fromSnapshot(DocumentSnapshot snapshot)
-      : this.fromMap(snapshot.data, reference: snapshot.reference);
+//   Record.fromSnapshot(DocumentSnapshot snapshot)
+//       : this.fromMap(snapshot.data, reference: snapshot.reference);
 
-  @override
-  String toString() => "Record<$name:$message>";
-}
+//   @override
+//   String toString() => "Record<$name:$message>";
+// }
